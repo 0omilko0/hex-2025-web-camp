@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveSassCompile.settings.formats": [
+			{
+				// 指定編譯 css 輸出類型
+				"format": "compressed",
+				"extensionName": ".css",
+				"savePath": "/css"
+			}
+		]
+	}
+}
