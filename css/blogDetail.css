@@ -1,0 +1,378 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  outline: solid 1px;
+}
+
+body {
+  color: #000;
+  font-family: "Noto Sans TC", Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 120px;
+  font-weight: 900;
+  color: #0027D5;
+}
+
+@media (max-width: 1550px) {
+  h1 {
+    font-size: 52px;
+  }
+}
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 24px;
+  color: #0027D5;
+}
+
+a {
+  display: inline-block; /* 原a標籤設定行內元素不會撐起高度，調整可設定元素寬高。 */
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle; /* 解決圖片下的空白 */
+  width: 100%;
+  height: auto;
+}
+
+.read_content {
+  color: #4B4B4B;
+  padding: 8px 16px;
+  border: 1px solid #000;
+  border-radius: 40px;
+}
+
+.read_content:hover {
+  color: #FFFFFF;
+  background-color: #000000;
+}
+
+.top_article {
+  font-size: 16px;
+  color: #FFFFFF;
+  background-color: #0027D5;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 40px;
+}
+
+.navbar {
+  padding: 24px 0;
+  /*position: fixed;*/
+  width: 100%;
+}
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.navbar ul a {
+  font-size: 28px;
+  color: #000;
+  font-weight: 700;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+}
+.header-img {
+  width: 50%;
+}
+.header-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  padding-left: 80px;
+  background-image: url("../img/desktop/index/Hero Section2.png");
+  color: #0027D5;
+}
+
+@media (max-width: 992px) {
+  .header {
+    flex-wrap: wrap;
+  }
+  .header-img {
+    width: 100%;
+  }
+  .header-title {
+    width: 100%;
+    padding: 24px;
+  }
+}
+.sub-header {
+  display: flex;
+  gap: 24px;
+}
+.sub-header-img {
+  width: 50%;
+}
+.sub-header-content {
+  width: 50%;
+  align-self: center;
+}
+.sub-header-content-title {
+  display: flex;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  gap: 8px;
+}
+.sub-header-content p {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* 限制顯示行數 */
+  line-clamp: 2; /* 標準屬性，提升相容性 */
+  overflow: hidden;
+}
+
+@media (max-width: 992px) {
+  .sub-header {
+    gap: 0px;
+    flex-wrap: wrap;
+  }
+  .sub-header-img {
+    width: 100%;
+  }
+  .sub-header-content {
+    width: 100%;
+    padding: 48px 12px;
+  }
+}
+.footer {
+  border-top: #6C757D solid 1px;
+}
+.footer-content {
+  max-width: 1296px;
+  margin: 0 auto;
+  padding: 80px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.footer-content ul {
+  display: flex;
+}
+.footer-content .email {
+  font-size: 32px;
+}
+.footer-copyright {
+  text-align: center;
+  padding: 24px 0;
+  font-size: 16px;
+}
+
+@media (max-width: 992px) {
+  .footer-content {
+    display: none;
+  }
+}
+.container {
+  max-width: 1296px;
+  margin: 0 auto;
+  padding: 80px 0px;
+}
+
+/* max-width: 1296px + padding-left/right: 12px; */
+@media (max-width: 1320px) {
+  .container {
+    padding: 64px 12px;
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.container .content-item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.container .content-item h2 {
+  color: #0027D5;
+}
+.container .content-item h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.container .content-item ol {
+  padding-left: 24px;
+  list-style-type: decimal;
+}
+.container .content-item ul {
+  padding-left: 24px;
+  list-style-type: disc;
+}
+.container .content-item a {
+  color: #0027D5;
+}
+.container .content-item .tip {
+  padding: 24px;
+  border-radius: 24px;
+  background-color: #EDEDED;
+  font-weight: 700;
+}
+.container .button {
+  display: flex;
+  justify-content: space-between;
+}
+.container .button a {
+  padding: 8px 16px;
+  width: 108px;
+  text-align: center;
+  border-radius: 40px;
+  color: #4B4B4B;
+}
+.container .button a i {
+  width: 24px;
+  height: 24px;
+}/*# sourceMappingURL=blogDetail.css.map */

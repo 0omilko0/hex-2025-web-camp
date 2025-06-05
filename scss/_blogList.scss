@@ -1,0 +1,134 @@
+
+.search_block{
+    display: flex;
+    width: 416px;
+    height: 56px;
+    border: 1px solid #4B4B4B;
+    border-radius: 40px;
+
+    &-icon{
+        width: 24px;
+        height: 24px;
+        margin: 16px 10px 16px 16px;
+        color: #4B4B4B;
+        font-size: 24px;
+        line-height: 1;
+    }
+
+    &-input{
+        margin: 16px 48px 16px 0px;
+        border: none;
+        width: 100%;
+    }
+}
+
+@media (max-width:992px) {
+    .search_block{
+        width: 100%;
+    }
+}
+
+@media (max-width:767px){  
+}
+
+.content{
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 40px 0;
+        gap: 80px 24px;
+    }
+
+    &-card{
+        width: 416px;
+
+        img{
+            margin-bottom: 16px;
+        }
+
+        &-body{
+            margin-bottom: 16px;
+
+            time{
+                display: block;
+                margin-bottom: 4px;
+            }
+
+            .hash_tag{
+                justify-content: start;
+                padding: 0;
+                gap: 0px 4px;
+                font-size: 24px;
+                color: $primary;
+            }
+
+            h2{
+                margin-bottom: 8px;
+                color: $black;
+            }
+
+            p{
+                color: #4B4B4B;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;  /* 限制顯示行數 */
+                line-clamp: 2;  /* 標準屬性，提升相容性 */
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+@media (max-width:1320px) {
+    .content{
+        ul{
+            justify-content: space-between;
+        }
+
+        &-card{
+            width: 48%;
+        }
+    }
+}
+
+@media (max-width:767px){
+    .content{
+        &-card{
+            width: 100%;
+        }
+    }
+}
+
+.page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+
+    ul{
+        display: flex;
+        justify-content: center;
+        width: 328px;
+    }
+
+    &-item{
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        padding: 8px;
+        color: #4B4B4B;
+
+        a:visited{
+            color: #4B4B4B;
+        }
+
+        a:hover{
+            color: $primary;
+        }
+
+        .active:visited{
+            color: $primary;
+        }
+    }
+}
